@@ -1,0 +1,142 @@
+div.thumbnail {
+	width: 100%;
+	position: relative;
+	margin-bottom: 8px;
+}
+
+div.video-time {
+	background-color: black;
+	color: white;
+	position: absolute;
+	bottom: 8px;
+	right: 5px;
+	font-size: 12px;
+	font-weight: 500;
+
+	/* Padding shortcut */
+	/* top right bottom left */
+	/* vertical horizontal */
+
+	padding: 4px;
+
+	/* Works with margin as well */
+
+	border-radius: 2px;
+}
+
+img.channel-picture {
+	border-radius: 50%;
+	width: 36px;
+}
+
+div.channel-picture {
+	width: 38px;
+	vertical-align: top;
+	position: relative;
+	height: 36px;
+}
+
+p.video-title {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+	margin-bottom: 10px;
+}
+
+img.thumbnail {
+	width: 100%;
+}
+
+p.video-author,
+p.video-info {
+	font-size: 12px;
+	color: rgb(96, 96, 96);
+}
+
+p.video-author {
+	margin-bottom: 4px;
+}
+
+div.video-information-grid {
+	display: grid;
+	grid-template-columns: 40px 1fr;
+}
+
+div.video-previews {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 15px;
+	row-gap: 45px;
+}
+
+div.channel-tooltip-container {
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.45);
+	border-radius: 4px;
+	width: 200px;
+	display: flex;
+	z-index: 300;
+	background-color: white;
+	position: absolute;
+	padding-left: 9px;
+	padding-right: 18px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	opacity: 0;
+	bottom: -85px;
+	pointer-events: none;
+	transition: opacity 0.15s;
+}
+
+img.tooltip-channel-picture {
+	border-radius: 50%;
+	height: 45px;
+	margin-right: 6px;
+}
+
+div.channel-picture:hover div.channel-tooltip-container {
+	opacity: 1;
+}
+
+p.tooltip-channel-name {
+	font-weight: bold;
+}
+
+p.tooltip-channel-subscribers {
+	font-size: 13px;
+	color: rgb(143, 143, 143);
+}
+
+/* Border not affected by inheritance, mostly with text properties */
+
+@media (min-width: 751px) and (max-width: 1199px) {
+	div.video-previews {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (min-width: 1200px) {
+	div.video-previews {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	p.video-title {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+@media (min-width: 2000px) {
+	p.video-author,
+	p.video-info {
+		font-size: 18px;
+	}
+
+	p.video-title {
+		font-size: 20px;
+		line-height: 28px;
+	}
+}

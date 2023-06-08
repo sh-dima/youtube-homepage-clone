@@ -1,0 +1,3 @@
+[submodule "shdima"]
+	path = profile
+	url = git@gitlab.com:shdima/shdima.git
